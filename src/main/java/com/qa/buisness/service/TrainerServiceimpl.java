@@ -10,23 +10,28 @@ public class TrainerServiceimpl implements TrainerService
 	private TrainerRepository repo;
 	
 
+	@Override
 	public String addTrainer(String Trainer) 
 	{
 		return repo.createTrainer(Trainer);
 	}
 
+	@Override
 	public String getAllTrainers() {
 		return repo.getAllTrainers();
 	}
 
+	@Override
 	public String getATrainer(Long id) {	
 		return repo.getATrainer(id);
 	}
 
+	@Override
 	public String updateTrainer(String Trainer, Long id) {
 		return repo.updateTrainer(Trainer, id);
 	}
 
+	@Override
 	public String deleteTrainer(Long id) {
 		return repo.deleteTrainer(id);
 	}

@@ -69,5 +69,12 @@ public class DBRepositoryTest
 		String reply = repotrainer.deleteTrainer(1L);
 		String reply2 = repotrainer.deleteTrainer(2L);
 	}
+	
+	@Test
+	public void testupdateTrainer() 
+	{
+		String reply = repotrainer.updateTrainer(MOCK_OBJECT, 1l);
+		Assert.assertEquals(reply, "{\"message\": \"Trainer sucessfully updated\"}");
+	}
 
 }
