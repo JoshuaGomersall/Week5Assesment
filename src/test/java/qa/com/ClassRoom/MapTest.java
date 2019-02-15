@@ -5,21 +5,26 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 import com.qa.persistence.repository.TraineeMapRepository;
+import com.qa.persistence.repository.TrainerMapRepository;
 
 public class MapTest 
 {
 	TraineeMapRepository repo;
-
+	TrainerMapRepository repo2;
+	
+	
 	@Before
 	public void setup() 
 	{
 		repo = new TraineeMapRepository();
+		repo2 = new TrainerMapRepository();
 	}
 
 	@Test
 	public void addTraineeTest() 
 	{
 		repo.createTrainee("{\"id\":\"1l\",\"traineeName\":\"John\"}");
+		repo2.createTrainer("{\"id\":\"1l\",\"traineeName\":\"John\"}");
 	}
 
 	@Test
@@ -41,8 +46,11 @@ public class MapTest
 	@Test
 	public void getall() {
 		repo.getAllTrainees();
+		repo2.getAllTrainers();
 		repo.createTrainee("wdad");
 		repo.deleteTrainee(1l);
+		repo2.deleteTrainer(1l);
 		repo.getATrainee(1l);
+		repo2.getATrainer(1l);
 	}
 }

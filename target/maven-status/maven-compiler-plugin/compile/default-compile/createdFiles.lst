@@ -3,6 +3,7 @@ com\qa\rest\TrainerEndpoint.class
 com\qa\persistence\repository\TraineeDBRepository.class
 com\qa\persistence\repository\TraineeRepository.class
 com\qa\rest\TraineeEndpoint.class
+com\qa\persistence\repository\TrainerMapRepository.class
 com\qa\buisness\service\TrainerService.class
 com\qa\buisness\service\TraineeService.class
 com\qa\persistence\domain\Trainer.class
