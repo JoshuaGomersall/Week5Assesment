@@ -26,7 +26,6 @@ public class DBRepositoryTest
 {
 	@InjectMocks
 	private TrainerDBRepository repotrainer;
-	private TraineeDBRepository repotrainee;
 
 	@Mock
 	private EntityManager manager;

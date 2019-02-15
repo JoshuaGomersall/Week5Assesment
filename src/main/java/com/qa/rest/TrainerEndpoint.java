@@ -9,9 +9,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import com.qa.buisness.service.TrainerService;
 
-
 @Path("/trainer")
 public class TrainerEndpoint {
+
 	@Inject
 	private TrainerService service;
 

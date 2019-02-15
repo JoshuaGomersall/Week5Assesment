@@ -14,6 +14,7 @@ import javax.transaction.Transactional;
 import com.qa.persistence.domain.Trainer;
 import com.qa.util.JSONUtil;
 
+
 @Transactional(SUPPORTS)
 @Default
 public class TrainerDBRepository implements TrainerRepository
