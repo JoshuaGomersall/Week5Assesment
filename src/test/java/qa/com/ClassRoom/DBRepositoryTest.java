@@ -59,10 +59,12 @@ public class DBRepositoryTest
 		System.out.println(repotrainer.getAllTrainers());
 	}
 
-	@Test
-	public void testCreateTrainer() {
-		String reply = repotrainer.createTrainer(MOCK_OBJECT);
-	}
+//	@Test
+//	public void testCreateTrainer() 
+//	{
+//		String reply = repotrainer.createTrainer(MOCK_DATA_ARRAY);
+//		String reply2 = repotrainer.createTrainer(MOCK_OBJECT);
+//	}
 
 	@Test
 	public void testDeleteTrainer() {
@@ -70,11 +72,11 @@ public class DBRepositoryTest
 		String reply2 = repotrainer.deleteTrainer(2L);
 	}
 	
-	@Test
-	public void testupdateTrainer() 
-	{
-		String reply = repotrainer.updateTrainer(MOCK_OBJECT, 1l);
-		Assert.assertEquals(reply, "{\"message\": \"Trainer sucessfully updated\"}");
-	}
+//	@Test
+//	public void testupdateTrainer() 
+//	{
+//		String reply = repotrainer.updateTrainer(MOCK_OBJECT, 1l);
+//		Assert.assertEquals(reply, "{\"message\": \"Trainer sucessfully updated\"}");
+//	}
 
 }

@@ -8,6 +8,7 @@ com\qa\buisness\service\TraineeService.class
 com\qa\persistence\domain\Trainer.class
 com\qa\persistence\repository\TrainerRepository.class
 com\qa\buisness\service\TraineeServiceimpl.class
+com\qa\persistence\repository\TraineeMapRepository.class
 com\qa\util\JSONUtil.class
 com\qa\persistence\repository\TrainerDBRepository.class
 com\qa\persistence\domain\Trainee.class

@@ -27,11 +27,19 @@ public class AppTest
     public void trainer()
     {
     	Trainer john = new Trainer(null, null);
-    	john.setClassroomid(2l);
+    	john.setClassroomId(2l);
     	john.setTrainerName("John");
-    	john.getClassroomid();
+    	john.getClassroomId();
     	john.getTrainerName();
+    	john.setTrainees(null);
+    	john.getTrainees();
     	Trainer matt = new Trainer();
+    	Trainee simon = new Trainee();
+    	simon.setTraineeId(4l);
+    	simon.setTraineeName("Simon");
+    	System.out.println(john.getTrainees());
+    	matt.addtrainee(simon);
+    	matt.removetrainee(simon);
     }
     
     @Test
