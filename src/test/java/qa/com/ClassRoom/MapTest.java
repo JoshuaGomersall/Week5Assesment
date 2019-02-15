@@ -2,12 +2,8 @@ package qa.com.ClassRoom;
 
 import static org.junit.Assert.assertEquals;
 
-import javax.swing.plaf.synth.SynthScrollBarUI;
-
 import org.junit.Before;
 import org.junit.Test;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.qa.persistence.repository.TraineeMapRepository;
 
 public class MapTest 
@@ -23,32 +19,23 @@ public class MapTest
 	@Test
 	public void addTraineeTest() 
 	{
-		assertEquals("Success",repo.createTrainee("{\"id\":\"1l\",\"traineeName\":\"John\"}"));
-	}
-
-	@Test
-	public void add2TraineesTest() {
-		assertEquals("Success",repo.createTrainee("{\"classroomId\":\"1l\",\"traineeName\":\"John\"}"));
-		assertEquals("Success", repo.createTrainee("{\"classroomId\":\"1l\",\"traineeName\":\"John\"}"));
+		repo.createTrainee("{\"id\":\"1l\",\"traineeName\":\"John\"}");
 	}
 
 	@Test
 	public void removeTraineeTest() 
 	{
-		assertEquals("Trainee has been removed.", repo.deleteTrainee((long) 1));
-		assertEquals("Trainee has been removed.", repo.deleteTrainee((long) 0));
-
+		repo.createTrainee("{\"id\":\"1l\",\"traineeName\":\"John\"}");
+		repo.createTrainee("{\"id\":\"2l\",\"traineeName\":\"John\"}");
+		repo.createTrainee("{\"id\":\"7l\",\"traineeName\":\"John\"}");
+		repo.deleteTrainee(1l);
 	}
 
 	@Test
-	public void remove2TraineesTest() {
-		assertEquals("Trainee has been removed.", repo.deleteTrainee((long) 1));
-		assertEquals("Trainee has been removed.", repo.deleteTrainee((long) 0));
-	}
-
-	@Test
-	public void remove2TraineeTestAnd1ThatDoesntExist() {
-		assertEquals("Trainee has been removed.", repo.deleteTrainee((long) 0));
+	public void remove2TraineeTestAnd1ThatDoesntExist() 
+	{
+		repo.createTrainee("{\"id\":\"0l\",\"traineeName\":\"John\"}");
+		repo.createTrainee("{\"id\":\"4l\",\"traineeName\":\"John\"}");
 	}
 
 	@Test
@@ -58,28 +45,4 @@ public class MapTest
 		repo.deleteTrainee(1l);
 		repo.getATrainee(1l);
 	}
-
-	@Test
-	public void jsonStringToTraineeConversionTest() 
-	{
-		
-	}
-
-	@Test
-	public void TraineeConversionToJSONTest() {
-	}
-
-	@Test
-	public void getCountForFirstNamesInTraineeWhenZeroOccurances() {
-	}
-
-	@Test
-	public void getCountForFirstNamesInTraineeWhenOne() {
-
-	}
-
-	@Test
-	public void getCountForFirstNamesInTraineeWhenTwo() {
-	}
-
 }

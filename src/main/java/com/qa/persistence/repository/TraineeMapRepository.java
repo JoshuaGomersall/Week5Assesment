@@ -32,8 +32,12 @@ public class TraineeMapRepository implements TraineeRepository {
 	Map<Long, Trainee> traineeMap = new HashMap<Long, Trainee>();
 	Trainee startTest = new Trainee(id++, "Test");
 
+	
+	
+	
 	@Override
-	public String getAllTrainees() {
+	public String getAllTrainees() 
+	{
 		traineeMap.put(id, startTest);
 		Trainee john = new Trainee(1l, "John");
 		Trainee Richard = new Trainee(2l, "Richard");
@@ -59,10 +63,18 @@ public class TraineeMapRepository implements TraineeRepository {
 	}
 
 	@Override
-	public String deleteTrainee(Long id) {
-		this.traineeMap.remove(id);
+	public String deleteTrainee(Long id) 
+	{
+		if (traineeMap.containsKey(id))
+		{
+		traineeMap.remove(id);
 		return "Trainee has been removed.";
-	}
+		}
+		else
+		{
+			return "fail";	
+		}
+		}
 
 	@Override
 	public String createTrainee(String trainee) {
@@ -70,7 +82,9 @@ public class TraineeMapRepository implements TraineeRepository {
 			Trainee John = util.getObjectForJSON(trainee, Trainee.class);
 			traineeMap.put(id++, John);
 			return "Success";
-		} catch (Exception o) {
+		} catch (Exception o) 
+		{
+			System.out.println("" + trainee);
 			return "Fail";
 		}
 
