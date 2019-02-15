@@ -1,4 +1,5 @@
 qa\com\ClassRoom\AppTest.class
+qa\com\ClassRoom\MapTest.class
 qa\com\ClassRoom\DBRepositoryTraineeTest.class
 qa\com\ClassRoom\DBRepositoryTest.class
 qa\com\ClassRoom\EndPointTest.class

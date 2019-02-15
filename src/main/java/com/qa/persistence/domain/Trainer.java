@@ -14,11 +14,30 @@ import javax.persistence.OneToMany;
 public class Trainer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private Long classroomid = 1l;
+	private Long classroomId = 1l;
 	private String trainerName = "";
 
+	
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Trainee> trainees = new ArrayList<>();
+
+	
+	
+	public Long getClassroomId() {
+		return classroomId;
+	}
+
+	public void setClassroomId(Long classroomId) {
+		this.classroomId = classroomId;
+	}
+
+	public List<Trainee> getTrainees() {
+		return trainees;
+	}
+
+	public void setTrainees(List<Trainee> trainees) {
+		this.trainees = trainees;
+	}
 
 	public void addtrainee(Trainee trainee) {
 		trainees.add(trainee);
@@ -36,16 +55,16 @@ public class Trainer {
 
 	public Trainer(Long classroomid, String trainerName) {
 		super();
-		this.classroomid = classroomid;
+		this.classroomId = classroomid;
 		this.trainerName = trainerName;
 	}
 
 	public Long getClassroomid() {
-		return classroomid;
+		return classroomId;
 	}
 
 	public void setClassroomid(Long classroomid) {
-		this.classroomid = classroomid;
+		this.classroomId = classroomid;
 	}
 
 	public String getTrainerName() {
