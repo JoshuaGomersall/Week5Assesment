@@ -14,6 +14,4 @@ public interface TrainerRepository {
 
 	// D
 	String deleteTrainer(Long id);
-
-	//int cycleTrainers(String title);
 }

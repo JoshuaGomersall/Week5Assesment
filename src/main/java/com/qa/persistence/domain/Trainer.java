@@ -1,5 +1,6 @@
 package com.qa.persistence.domain;
 
+
 import java.util.ArrayList;
 import java.util.List;
 

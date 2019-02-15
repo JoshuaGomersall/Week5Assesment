@@ -1,6 +1,7 @@
 package com.qa.buisness.service;
 
 import javax.inject.Inject;
+
 import com.qa.persistence.repository.TrainerRepository;
 
 public class TrainerServiceimpl implements TrainerService
